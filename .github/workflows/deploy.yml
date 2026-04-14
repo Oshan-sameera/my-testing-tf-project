@@ -5,6 +5,9 @@ on:
     branches: [main]
   workflow_dispatch: # This enables the manual trigger
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true # This resolves the deprecation warning
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
